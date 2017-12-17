@@ -1,0 +1,24 @@
+{% load staticfiles %}
+<html>
+<link rel="stylesheet" type="text/css" href="{% static 'library/style8.css' %}" />
+
+<form>
+<button formaction="\library/mainpage/">Home</button>
+</form>
+<body>
+<center>
+<h1>{{name}}</h1>
+
+<div class="col-5">
+<img class="img-res" src="{% static 'library/images/user.jpg' %}" alt="user"></div>
+<div class="col-5">
+<p><b>Phone number -></b>  {{phone}} </p>
+
+<b>Email -></b> {{email}}
+</div>
+
+
+
+</center>
+</body>
+</html>

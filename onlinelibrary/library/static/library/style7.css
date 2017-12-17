@@ -1,0 +1,31 @@
+body{
+background:url("images/search1.jpg") right no-repeat;
+}
+h1{
+color:blue;
+}
+div{
+max-width:100%;
+height:auto;
+margin:auto;
+}
+ul{
+  list-style: none;
+}
+.button {
+    background: url("images/button.jpg");
+    border: 2px solid black;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font: 16px myFirstFont;
+    margin: 4px 2px;
+    cursor: pointer;
+    background: url("images/button.jpg");
+	}
+	.button:hover{
+	background-color:blue;
+	color:red;
+	}

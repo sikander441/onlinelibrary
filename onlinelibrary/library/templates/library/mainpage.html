@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en">
+    <head>
+
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Creative CSS3 Animation Menus" />
+        <meta name="keywords" content="menu, navigation, animation, transition, transform, rotate, css3, web design, component, icon, slide" />
+        <meta name="author" content="Codrops" />
+        <link rel="shortcut icon" href="../favicon.ico">
+        <link rel="stylesheet" type="text/css" href="{% static 'library/demo.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'library/style_1.css' %}" />
+        <link href='http://fonts.googleapis.com/css?family=Terminal+Dosis' rel='stylesheet' type='text/css' />
+    </head>
+    <body>
+      <div class="search">
+            </center>
+            <form method="post" action=" /library/search/">
+              {% csrf_token %}
+
+                 <input type="search" placeholder="Search" name="key"/>
+              </form></center>
+        </div>
+        <div class="container">
+            <div class="content">
+                <ul class="ca-menu">
+                    <li>
+                        <a href="\library\tech">
+                            <span class="ca-icon">&#76;</span>
+                            <div class="ca-content">
+                                <h2 class="ca-main">Tehcnical Library</h2>
+                                <h3 class="ca-sub">For the nerd in you</h3>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="\library\non_tech">
+                            <span class="ca-icon">&#76;</span>
+                            <div class="ca-content">
+                                <h2 class="ca-main">Non-Technical library</h2>
+                                <h3 class="ca-sub">For the book lover in you</h3>
+                            </div>
+                        </a>
+                    </li>
+
+                </ul><br>
+<ul class="ca-menu">
+                <li>
+                  <a href="\library\profile">
+                      <span class="ca-icon">&#85;</span>
+                      <div class="ca-content">
+                          <h2 class="ca-main">My profile</h2>
+                          <h3 class="ca-sub">Add books here,logout</h3>
+                      </div>
+                  </a>
+              </li>
+</ul>
+            </div><!-- content -->
+        </div>
+
+    </body>
+</html>

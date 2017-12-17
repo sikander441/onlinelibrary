@@ -1,0 +1,29 @@
+<html>
+{% load staticfiles %}
+<link rel="stylesheet" type="text/css" href="{% static 'library/style3.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'library/style8.css' %}" />
+<body>
+  <div>
+  <form>
+  <button formaction="\library/mainpage/">Home</button>
+
+
+<strong><center>BELOW IS THE STATS OF SEARCH DONE IN OUR WEBSITE</strong>
+
+<h4><i>TOTAL NO OF SEARCHES:    {{ total }}</h4>
+<h4>IN TECHNICAL LIBRARY:    {{ tech }}</h4>
+<h4>IN NON TECHNICAL LIBRARY:     {{ non }}</h4><br>
+<h4>TECHNICAL LIBRARY DEPARTMENT WISE:</h4>
+<h4>MECHANICAL DEPARTMENT:    {{ mech }}</h4>
+<h4>COMPUTER DEPARTMENT:    {{ comp }}</h4>
+<h4>ELECTRONICS DEPARTMENT:    {{ entc }}</h4>
+
+<br>
+<h4>NON TECHNICAL LIBRARY DEPARTMENT WISE:</h4>
+<h4>FICTION:    {{ fiction }}</h4>
+<h4>NON FICTION:    {{ non_fiction }}</h4>
+<h4>MAGAZINES:    {{ Maga }}</h4>
+</i>
+  </form>
+</div>
+</body>

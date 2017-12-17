@@ -1,0 +1,36 @@
+{% load staticfiles %}
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="{% static 'library/style6.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'library/style6.css' %}" />
+<form>
+<button formaction="\library/mainpage/">Home</button>
+</form>
+</head>
+<body>
+<center>
+<div>
+<h1> List of Books you have in Technical Department</h1>
+</div>
+<div>
+<h4>****Please select one to delete****</h4><br><br>
+</div>
+<div>
+<form method="post" action=" /library/delete_tech/">
+  {% csrf_token %}
+
+  <table id="things">
+    {% for i in all_books %}
+    <tr><td class="bg"><input type="radio" name="book" value= "{{ i }}" checked> {{ i }}></td></tr>
+      {% endfor %}
+
+  </table>
+
+</div>
+<div>
+  <button class="button">Delete</button>
+</div>
+</form>
+</center>
+</body>
+</html>

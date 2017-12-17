@@ -1,0 +1,34 @@
+body {
+    background: url("images/cover.jpg");
+    background-size:     cover;
+
+    background-position: center center;
+}
+h1{
+color:blue;
+font: 40px italic;
+}
+h2{
+color:red;
+font: 30px italic;
+}
+ul{
+  list-style: none;
+}
+.button {
+    background: url("images/button.jpg");
+    border: 2px solid black;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font: 16px myFirstFont;
+    margin: 4px 2px;
+    cursor: pointer;
+    background: url("images/button.jpg");
+	}
+	.button:hover{
+	background-color:blue;
+	color:red;
+	}

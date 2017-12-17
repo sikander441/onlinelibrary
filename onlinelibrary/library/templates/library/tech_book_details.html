@@ -1,0 +1,31 @@
+{% load staticfiles %}
+<html>
+
+
+<link rel="stylesheet" type="text/css" href="{% static 'library/style6.css' %}" />
+<body style="background: url('{% static "library/images/back1.jpg" %}');color:black;font-size:20px;">
+  <form>
+<button formaction="\library/mainpage/">Home</button>
+</form>
+<center>
+<h1>{{book.Book_name}}</h1>
+
+
+
+<p><b>Department -></b>   <i>{{book.Department}} </i> </p>
+
+<b>Subject -></b> <i>{{book.Subject}}</i>
+<br/>
+<b>Author -></b>  <i>{{book.Author_name}} </i>
+<br/>
+
+<h3>List of Available users</h3>
+<ul>
+  {% for book1 in all_books %}
+  <h1><li><a href="/library/users/{{ book1.Lender }}/">{{ book1.Lender }}</a></li></h1>
+  {% endfor %}
+</ul>
+
+</center>
+</body>
+</html>

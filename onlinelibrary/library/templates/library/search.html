@@ -1,0 +1,26 @@
+{% load staticfiles %}
+<html>
+
+<link rel="stylesheet" type="text/css" href="{% static 'library/style7.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'library/style6.css' %}" />
+<body style="background: url('{% static "library/images/search1.jpg" %}') right no-repeat;;">
+  <form>
+<button formaction="\library/mainpage/">Home</button>
+</form>
+<center><h1> SEARCH RESULTS</h1></center><br>
+<table id="things">
+  <tr><th> TECHNICAL BOOKS<small></small></th></tr>
+{% for i in tech_books %}
+  <tr><td class="bg"><a href="/library/search/tech/{{ i.id }}/">{{ i.Book_name }}</a></td></tr>
+    {% endfor %}
+
+</table>
+<table id="things">
+  <tr><th> NON TECHNICAL BOOKS<small></small></th></tr>
+{% for i in non_tech_books %}
+  <tr><td class="bg"><a href="/library/search_non/{{ i.id }}/">{{ i.Book_name }}</a></td></tr>
+    {% endfor %}
+
+</table>
+</body>
+</html>

@@ -1,0 +1,45 @@
+@import url('reset.css');input[type=search] {
+    border-radius: 200px;
+    width: 130px;
+
+    border: 2px solid #ccc;
+
+    font-size: 16px;
+    background-color: white;
+
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+
+}
+
+body{
+  background: white url("images/download.jpg");
+  background-size:     cover;                      /* <------ */
+  background-repeat:   ;
+  
+	color: #333;
+	font-family: 'Terminal Dosis', Arial, sans-serif;
+	font-size: 13px;
+}
+input[type=search] {
+    width: 130px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+background-image: url('images/searchicon.png');
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+   margin-left: 05px;
+   margin-top: 10px;
+}
+input[type=search]:focus {
+    width: 30%;
+}

@@ -1,0 +1,95 @@
+
+body {
+    background: white url("images/back.png");
+    background-size:     cover;                      /* <------ */
+    background-repeat:no-repeat;
+    background-position: center center;
+}
+ul{
+  list-style: none;
+}
+div.col1{
+/*background-image:url("images/book.png");*/
+border:1px solid red;
+
+
+}
+
+a:link {color: #000000}
+a:visited {color: #006600}
+a:hover {color: #FFCC00}
+a:active {color: #FF00CC}
+
+div{
+max-width:100%;
+height:auto;
+
+margin:10px;
+}
+div.col-3{
+width:30%;
+box-sizing:borderbox;
+float:left;
+padding:15px;
+margin:auto;
+text-align:center;
+}
+div.col-5{
+max-width:60%;
+height:600px;
+background:url("images/book1.jpg") no-repeat;
+background-size:cover;
+}
+input[type=search] {
+    width: 130px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+background-image: url('images/searchicon.png');
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+
+}
+input[type=search]:focus {
+    width: 30%;
+}
+.search
+{
+
+}
+.login
+{
+ float:right;
+}
+.password_field,.username_field
+{
+  padding: 8px 8px 10px 15px;
+  width: 130px;
+   border-radius: 4px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  color: black;
+  background-color:white;
+
+}
+button {
+    background: url("images/button.jpg");
+    border: 2px solid black;
+    color: black;
+    padding:5px 30px 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font: 16px myFirstFont;
+    cursor: pointer;
+
+	}
+	.button:hover{
+	background-color:blue;
+	color:red;
+	}

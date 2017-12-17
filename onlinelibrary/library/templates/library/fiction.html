@@ -1,0 +1,21 @@
+{% load staticfiles %}
+<html>
+<body>
+<link rel="stylesheet" type="text/css" href="{% static 'library/style4.css' %}" />
+<form>
+<button formaction="\library/mainpage/">Home</button>
+</form>
+
+<div class="fade">
+  <table id="things">
+    <tr><th>Books in Fiction <small></small></th></tr>
+    {% for i in all_books %}
+    <tr><td class="bg"><a href="/library/non_tech_book/{{ i.id }}/">{{ i.Book_name }}</a></td></tr>
+      {% endfor %}
+
+  </table>
+
+</div>
+</body>
+
+</html>

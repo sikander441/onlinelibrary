@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'library/style8.css' %}" />
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> add user </title>
+</head>
+
+<body><center>
+<h1>ADD USER</h1>
+<form method="post" action=" /library/add_user/">
+  {% csrf_token %}
+    <table>
+        <tr>
+            <td>Enter your name:</td>
+            <td><input type="text" name="name"/></td>
+        </tr>
+        <tr>
+            <td>Enter user_name:</td>
+            <td><input type="text" name="user_name"/></td>
+        </tr>
+        <tr>
+            <td>Enter email:</td>
+            <td><input type="text" name="email"/></td>
+        </tr>
+        <tr>
+            <td>Enter Phone_number:</td>
+            <td><input type="text" name="phone"/></td>
+        </tr>
+        <tr>
+            <td>Enter Password:</td>
+            <td><input type="text" name="password"/></td>
+        </table>
+
+			<br>
+			<div style="margin:10px;">
+                <button class="button">SUBMIT</button>
+            </div>
+
+    </form>
+</center>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<title>Homepage</title>
+
+{% load staticfiles %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'library/style.css' %}" />
+</head>
+
+<body>
+<div class="login">
+    <form method="post" action="/library/login_new/">
+      {% csrf_token %}
+          <input class ="username_field" placeholder="Username" type="text" name="user_name"/>
+            <input class="password_field" placeholder="Password" type="password" name="password"/>
+          <button class="login_buton" type="submit">Login </button>
+
+
+        <button type="submit" formaction="/library/signup/">Signup</button>
+      </form>
+</div>
+  <div class="search">
+        </center>
+        <form method="post" action=" /library/search/">
+          {% csrf_token %}
+
+             <input type="search" placeholder="Search" name="key"/>
+          </form></center>
+    </div>
+    <div>
+<center>
+
+<header>
+<div>
+ <h1><i>THE NEW LIBRARIAN</i></h1>
+ </div>
+ </header>
+ <div class="col-5">
+
+ <div>
+ <h1 style="padding:200px; font: 40px; word-spacing:150px; color:grey">WELCOME TO THE NEW WAY OF KNOWLEDGE SHARING</h1>
+ </div>
+ </div>
+
+
+</center>
+<center>
+  <form method="post" action="library/analysis/">
+    {% csrf_token %}
+<button onclick="/library/analysis">Analysis</button>
+
+<center>
+
+
+</div>
+</body>
+</html>

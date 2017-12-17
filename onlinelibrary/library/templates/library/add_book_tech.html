@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+{% load staticfiles %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'library/style8.css' %}" />
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> add book </title>
+</head>
+<body><center>
+<h1>ADD Book</h1>
+<form>
+<button formaction="\library/mainpage/">Home</button>
+</form>
+<form method="post" action=" /library/add_tech/">
+  {% csrf_token %}
+    <table>
+        <!-- <tr>
+            <td>Enter Type:</td>
+            <td><select>
+  <option value="tech" name="type">Technical</option>
+  <option value="non" name="type">Non Technical</option>
+
+                 </select></td>
+        </tr> -->
+        <div>
+            Enter book_name:
+           <input type="text" name="name"/>
+
+       </div>
+
+        <div>
+            Enter subject:
+            <input type="text" name="subject"/></div>
+
+
+            <div>Enter Author's name :
+            <input type="text" name="author"/>
+        </div>
+        <div> Department:<br>
+
+    <input type="radio" name="Department" value="computer" checked> computer<br>
+    <input type="radio" name="Department" value="electronics"> electronics<br>
+    <input type="radio" name="Department" value="mechanical"> mechanical
+    </div>
+            <div>
+                <button class="button">SUBMIT</button>
+       </div>
+</form></center>
+</body>
+</html>

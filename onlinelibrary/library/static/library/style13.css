@@ -1,0 +1,27 @@
+.button {
+  background: url("images/button.jpg");
+    border: 2px solid black;
+    color: black;
+    padding: 10px ;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font: 16px myFirstFont;
+    margin: 4px 2px;
+    cursor: pointer;
+	}
+	.button:hover{
+
+	color:Grey;
+	}
+  ul{
+    list-style: none;
+  }
+body {
+    background: url("images/back2.jpg");
+    background-repeat:no-repeat   ;
+    background-size:cover;
+}
+a:hover{
+color:red;
+}

@@ -1,0 +1,26 @@
+{% load staticfiles %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'library/style6.css' %}" />
+<form>
+<button formaction="\library/mainpage/">Home</button>
+</form>
+<center>
+<div>
+<h1> List of Books you have in Non Technical Department</h1>
+</div>
+<div>
+<h4>****Please select one to delete****</h4></div>
+<form method="post" action=" /library/delete_non_tech/">
+  {% csrf_token %}
+<div>
+  <table id="things">
+    {% for i in all_books %}
+    <tr><td class="bg"><input type="radio" name="book" value= "{{ i }}" checked> {{ i }}></td></tr>
+      {% endfor %}
+    </table>
+</div>
+<div>
+  <button class="button">DELETE</button>
+</div>
+</center>
+</form>

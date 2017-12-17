@@ -1,0 +1,68 @@
+{% load staticfiles %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'library/style6.css' %}" />
+
+
+<body style="background: url('{% static "library/images/paper.png" %}');color:black;font-size:20px;">
+<form action=" /library/mainpage/">
+  {% csrf_token %}
+        <div>
+                <button type="submit" class="but button">Back</button>
+       </div>
+</form></center>
+
+<center>
+  <h1>Welcome,</h1>
+  <h1><i>{{ name }}</i></h1>
+  <h2>Phone number: <i>{{ phone }}</i></h2>
+  <h3>Email ID : <i>{{ email }}</h3></i><br><br>
+  <h2>List of all books you have added</h2>
+
+  <table id="things" style="color:black;">
+    <tr><th>Technical Books <small></small></th></tr>
+    {% for i in tech_books %}
+    <center><tr><td class="bg">{{ i }}</td></tr></center>
+      {% endfor %}
+
+  </table>
+  <form action=" /library/add_book_tech/">
+    {% csrf_token %}
+          <div>
+
+                  <button class="button"><i>ADD BOOK</i></button>
+				  </div>
+              </form>
+          <form action=" /library/delete_book_tech/">
+          {% csrf_token %}
+
+              <button class="button"><i>DELETE</i></button>
+          </form>
+
+
+          <table id="things" style="color:black;">
+            <tr><th>Non Technical Books <small></small></th></tr>
+            {% for i in non_tech_books %}
+            <center><tr><td class="bg">{{ i }}</td></tr></center>
+              {% endfor %}
+            </table>
+<form action=" /library/add_book_non_tech/">
+  {% csrf_token %}
+        <div>
+                <button class="button"><i>ADD BOOK</i></button>
+            </form>
+        <form action=" /library/delete_book_non_tech/">
+        {% csrf_token %}
+
+            <button class="button"><i>DELETE</i></button>
+        </form>
+    </div>
+
+<br>
+<br>
+------------------------------------------------------------------------------------------------------------------------------------
+<form action=" /library/logout/">
+  {% csrf_token %}
+        <div>
+                <button class="button">logout</button>
+     </div>
+</form></center>
